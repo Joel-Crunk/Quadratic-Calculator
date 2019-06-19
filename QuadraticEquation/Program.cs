@@ -19,24 +19,14 @@ namespace QuadraticEquation
             Console.Write("Enter c: ");
             var c = Int32.Parse(Console.ReadLine());
 
-
-
-            double val1 = (b * b) - (4 * a * c);
-
-
-            double val = Math.Sqrt(val1);
-
-            double valPlus = -b + val;
-
-            double valMins = -b - val;
-
+            double val1       = (b * b) - (4 * a * c);
+            double val        = Math.Sqrt(val1);
+            double valPlus    = -b + val;
+            double valMins    = -b - val;
             double answerPlus = valPlus / (2 * a);
-
             double answerMins = valMins / (2 * a);
-
-            double testPlus = a * (answerPlus * answerPlus) + b * answerPlus + c;
-
-            double testMins = a * (answerMins * answerMins) + b * answerMins + c;
+            double testPlus   = a * (answerPlus * answerPlus) + b * answerPlus + c;
+            double testMins   = a * (answerMins * answerMins) + b * answerMins + c;
 
             if (testPlus == 0 && testMins == 0 || answerPlus == 0 || answerMins == 0)
             {
@@ -53,29 +43,13 @@ namespace QuadraticEquation
                 {
                     Console.WriteLine($"The answer is {answerPlus}");
                     Console.WriteLine($"The answer is {answerMins}");
-
-
                 }
-
             }
             else
             {
                 Console.WriteLine("This solution is not solvable!");
             }
-
-            
-
-
-
-
-
-
-           
-            
-
             Console.ReadLine();
-
-
         }
     }
 }
